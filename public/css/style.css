@@ -1,3 +1,15 @@
-.container {
-    background: blue;
+body {
+    font-family: 'Playfair Display', serif;
+    background:rgb(159, 194, 185);
+}
+
+.homepage {
+    background: rgb(96, 157, 168);
+    text-transform: uppercase;
+    width: 10rem;
+    margin-right: 40px;
+}
+
+.home-img {
+    border-radius: 3%;
 }
