@@ -8,6 +8,7 @@ body {
 .homeImg {
     max-width: 100%;
     max-height: 500px;
+    box-shadow: 5px 5px rgba(84, 91, 95, 0.966);
 }
 
 #mainNavBar.activated {
@@ -20,4 +21,17 @@ body {
 
 .homeSection {
     margin-top: 6rem;
+}
+
+.getStarted {
+    background:rgb(142, 165, 179);
+}
+
+.getStarted > a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn-info {
+    display: block;
 }
