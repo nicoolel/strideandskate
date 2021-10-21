@@ -1,3 +1,9 @@
+# Description
+
+A roller skating social media app.
+
+I picked up roller skating over the pandemic and was overwhelmed with information such as the basics, tricks to do, and the anatomy of a roller skate. This app serves as a platform to post your progress, share skate spots, and write reviews!
+
 # Install
 
 `npm install`
