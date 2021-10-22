@@ -23,11 +23,11 @@ body {
     margin-top: 6rem;
 }
 
-.getStarted {
+.getStarted, .btn-submit {
     background:rgb(142, 165, 179);
 }
 
-.getStarted > a {
+.getStarted > a{
     color: white;
     text-decoration: none;
 }
@@ -35,3 +35,25 @@ body {
 .btn-info {
     display: block;
 }
+
+/* sign up and login page */
+/* fix blue border around submit btn */
+.signUp, .login, .about, .profile, .post, .feed{
+    margin-top: 70px;
+}
+
+.btn-submit {
+    background:rgb(107, 131, 146);
+}
+
+/* media queries */
+
+/* small */
+
+/* @media (min-width: 576px) and (max-width: 760px){
+    .homeImg {
+        display: block;
+        margin: auto;
+        width: 50%;
+    }
+} */
