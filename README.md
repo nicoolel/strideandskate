@@ -24,3 +24,13 @@ I picked up roller skating over the pandemic and was overwhelmed with informatio
 # Run
 
 `npm start`
+
+---
+
+# How It's Made:
+
+Tech used on this project: EJS, CSS, Bootstrap, Javascript, Node.js, MongoDB, Express
+
+# Lessons Learned:
+
+It's rewarding creating your own app about something you're passionate about. I understood how MVC worked and where the requests were coming from.
