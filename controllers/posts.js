@@ -13,6 +13,7 @@ module.exports = {
   },
   getFeed: async (req, res) => {
     try {
+      // find posts and sort from the most recent to the least recent
       const posts = await Post.find().sort({ createdAt: "desc" }).lean();
       res.render("feed.ejs", { posts: posts });
     } catch (err) {
@@ -21,6 +22,7 @@ module.exports = {
   },
   getPost: async (req, res) => {
     try {
+      // find post based on user ID
       const post = await Post.findById(req.params.id);
       res.render("post.ejs", { post: post, user: req.user });
     } catch (err) {
@@ -31,7 +33,7 @@ module.exports = {
     try {
       // Upload image to cloudinary
       const result = await cloudinary.uploader.upload(req.file.path);
-
+      // create post based on the following items
       await Post.create({
         title: req.body.title,
         image: result.secure_url,
@@ -48,6 +50,7 @@ module.exports = {
   },
   likePost: async (req, res) => {
     try {
+      // find the id of the post and like it. this auto updates to add a like
       await Post.findOneAndUpdate(
         { _id: req.params.id },
         {
