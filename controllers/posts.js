@@ -31,8 +31,11 @@ module.exports = {
   },
   createPost: async (req, res) => {
     try {
-      // Upload image to cloudinary
-      const result = await cloudinary.uploader.upload(req.file.path);
+      // upload media file - img or video
+      const result = await cloudinary.uploader.upload(req.file.path, {
+        resource_type: "auto",
+        start_offset: "2"
+      });
       // create post based on the following items
       await Post.create({
         title: req.body.title,
