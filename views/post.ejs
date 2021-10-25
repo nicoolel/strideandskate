@@ -5,7 +5,14 @@
     <div class="col-6">
       <!-- plugging in title from document -->
       <h2><%= post.title %></h2>
-      <img class="img-fluid" src="<%= post.image%>" />
+      <!-- if video is uploaded and string includes 'video', display video tag -->
+      <!-- else if an img is uploaded, display img tag -->
+      <% if(post.image.includes('video')){ %>
+        <video width="400" height="240" controls src="<%= post.image%>" type="video/mp4">
+        </video>
+      <% } else if(post.image.includes('image')){ %>
+        <img class="img-fluid" src="<%= post.image%>" />
+      <% } %>
       <div class="row justify-content-between">
         <form
           class="col-1"

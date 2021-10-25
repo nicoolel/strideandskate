@@ -31,8 +31,15 @@
             <ul class="row list-unstyled">
             <% for(var i=0; i<posts.length; i++) {%>
               <li class="col-6 justify-content-between mt-5">
+                <!-- find posts from the user that match the id from postController -->
                 <a href="/post/<%= posts[i]._id%>">
-                  <img class="img-fluid" src="<%= posts[i].image%>">
+                  <% if(posts[i].image.includes('video')){ %>
+                    <video width="400" height="240" controls src="<%= posts[i].image%>" type="video/mp4">
+                    </video>
+                  <% } else if(posts[i].image.includes('image')){ %>
+                    <img class="img-fluid" src="<%= posts[i].image%>" />
+                  <% } %>
+                  <!-- <img class="img-fluid" src="<%= posts[i].image%>"> -->
                 </a>
               </li>
             <% } %>
