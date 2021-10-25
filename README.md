@@ -2,7 +2,9 @@
 
 A roller skating social media app.
 
-I picked up roller skating over the pandemic and was overwhelmed with information such as the basics, tricks to do, and the anatomy of a roller skate. This app serves as a platform to post your progress, share skate spots, and write reviews!
+I picked up roller skating over the pandemic as a way to get outdoors. I was overwhelemed with information such as which skates to get, what basics to practice first, and what type of skating I wanted to do.
+
+This app serves as a platform to connect with rollerskaters through progress posts. You can pin your favourite skate spots and write reviews on your favourite skate item.
 
 # Install
 
@@ -30,7 +32,3 @@ I picked up roller skating over the pandemic and was overwhelmed with informatio
 # How It's Made:
 
 Tech used on this project: EJS, CSS, Bootstrap, Javascript, Node.js, MongoDB, Express
-
-# Lessons Learned:
-
-It's rewarding creating your own app about something you're passionate about. I understood how MVC worked and where the requests were coming from.
