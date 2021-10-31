@@ -4,13 +4,13 @@
     <div class="row justify-content-center mt-5">
       <ul class="row list-unstyled">
         <% for(var i=0; i<posts.length; i++) {%>
-          <li class="col-6 justify-content-between mt-5">
+          <li class="col-12 col-md-6 col-lg-4 justify-content-between mt-2">
             <a href="/post/<%= posts[i]._id%>">
               <% if(posts[i].image.includes('video')){ %>
-                <video width="400" height="240" controls src="<%= posts[i].image%>" type="video/mp4">
+                <video width="400" height="240" controls src="<%= posts[i].image%>" type="video/mp4" class="feed-img">
                 </video>
               <% } else if(posts[i].image.includes('image')){ %>
-                <img class="img-fluid" src="<%= posts[i].image%>" />
+                <img class="feed-img" src="<%= posts[i].image%>" />
               <% } %>
             </a>
           </li>
@@ -18,6 +18,4 @@
         </ul>
     </div>
   </div>  
-<!-- <%- include('partials/footer') -%> -->
-</body>
-</html>
+<%- include('partials/footer') -%>
