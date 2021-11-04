@@ -2,7 +2,7 @@
 
     <div class="container profile">
       <div class="row mt-5">
-          <div class="col-6">
+          <div class="col-12 col-md-6">
               <div>
                   <p><strong>Welcome,</strong> <%= user.userName %></p>
                   <!-- <p><strong>Email</strong>: <%= user.email %></p> -->
@@ -26,13 +26,13 @@
                 </form>
               </div>
           </div>
-          <div class="col-6">
+          <!-- <div class="col-12 mt-2">
             <p><%= user.userName %>'s Page</p>
             <ul class="row list-unstyled">
             <% for(var i=0; i<posts.length; i++) {%>
-              <li class="col-6 justify-content-between mt-2">
+              <li class="col-12 col-md-6 col-lg-4 justify-content-between mt-2">
                 <!-- find posts from the user that match the id from postController -->
-                <a href="/post/<%= posts[i]._id%>">
+                <!-- <a href="/post/<%= posts[i]._id%>">
                   <% if(posts[i].image.includes('video')){ %>
                     <video width="250" height="250" controls src="<%= posts[i].image%>" type="video/mp4" class="feed-img">
                     </video>
@@ -40,14 +40,14 @@
                     <img class="img-fluid feed-img" src="<%= posts[i].image%>" />
                   <% } %>
                   <!-- <img class="img-fluid" src="<%= posts[i].image%>"> -->
-                </a>
+                <!-- </a>
               </li>
             <% } %>
             </ul>
-            <div class="row justify-content-center mt-5">
+            <div class="row justify-content-center mt-2 mb-2">
               <a class="btn btn-primary feed-btn" href="/feed">Return to Feed</a>
             </div>  
-          </div>  
+          </div>   -->
         </div>
       </div>
     </div>

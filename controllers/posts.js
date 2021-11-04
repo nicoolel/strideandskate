@@ -11,6 +11,14 @@ module.exports = {
       console.log(err);
     }
   },
+  getMyPosts: async (req, res) => {
+    try {
+      const posts = await Post.find({ user: req.user.id });
+      res.render("myPosts.ejs", { posts: posts, user: req.user });
+    } catch (err) {
+      console.log(err);
+    }
+  },
   getFeed: async (req, res) => {
     try {
       // find posts and sort from the most recent to the least recent
