@@ -40,6 +40,7 @@ module.exports = {
   createPost: async (req, res) => {
     try {
       // upload media file - img or video
+      // use cloudinary to upload the file that was submitted with the form
       const result = await cloudinary.uploader.upload(req.file.path, {
         resource_type: "auto",
         start_offset: "2"
@@ -47,6 +48,7 @@ module.exports = {
       // create post based on the following items
       await Post.create({
         title: req.body.title,
+        // grab url and ID off the result - the path came back from cloudinary (secure_url and public_id)
         image: result.secure_url,
         cloudinaryId: result.public_id,
         caption: req.body.caption,
@@ -61,10 +63,13 @@ module.exports = {
   },
   likePost: async (req, res) => {
     try {
+      //goes to Model - don't need to do db.collection 
       // find the id of the post and like it. this auto updates to add a like
       await Post.findOneAndUpdate(
+        // find a document where the id matches the id from the URL
         { _id: req.params.id },
         {
+          // increment (increase) the likes property by 1
           $inc: { likes: 1 },
         }
       );
@@ -72,6 +77,20 @@ module.exports = {
       res.redirect(`/post/${req.params.id}`);
     } catch (err) {
       console.log(err);
+    }
+  },
+  dislikePost: async (req, res) => {
+    try {
+      await Post.findOneAndUpdate(
+        { _id: req.params.id},
+        {
+          $inc: { likes: -1},
+        }
+      );
+      console.log("Likes -1")
+      res.redirect(`/post/${req.params.id}`);
+    } catch (err) {
+      console.log(err); 
     }
   },
   deletePost: async (req, res) => {

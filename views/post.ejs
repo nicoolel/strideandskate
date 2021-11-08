@@ -13,15 +13,24 @@
       <% } else if(post.image.includes('image')){ %>
         <img class="img-fluid" src="<%= post.image%>" />
       <% } %>
-      <div class="row justify-content-between">
+      <div class="row justify-content-end">
+        <h3 class="col-3">Likes: <%= post.likes %></h3>
+                <!-- method override makes the form a put - like btn has type submit -->
+                <!-- when we rendered the post, we took the ID into the action  -->
         <form
           class="col-1"
           action="/post/likePost/<%= post.id %>?_method=PUT"
           method="POST"
         >
-          <button class="btn btn-primary fa fa-heart" type="submit"></button>
+          <button id="likeBtn" class="btn btn-primary fa fa-heart" type="submit"></button>
         </form>
-        <h3 class="col-3">Likes: <%= post.likes %></h3>
+        <form
+          class="col-1"
+          action="/post/dislikePost/<%= post.id %>?_method=PUT"
+          method="POST"
+        >
+        <button id="dislikeBtn" class="btn btn-primary fa fa-heart-broken" type="submit"></button>
+        </form>
        <!-- if the user matches the user.id, then they get the delete button -->
         <%if(post.user == user.id){ %>
         <form
@@ -35,9 +44,10 @@
       </div>
     </div>
     <div class="col-3 mt-5">
+      <p>Created by: <%= user.userName %></p>
       <p><%= post.caption %></p>
     </div>
-    <div class="col-12 mt-5">
+    <div class="col-6 mt-5">
       <a class="btn btn-primary" href="/myPosts">Return to Profile</a>
       <a class="btn btn-primary" href="/feed">Return to Feed</a>
     </div>
