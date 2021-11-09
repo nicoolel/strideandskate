@@ -1,6 +1,6 @@
 body {
     font-family: 'Playfair Display', serif;
-    background:rgba(192, 210, 214, 0.788);
+    background:rgb(220, 232, 235);
 }
 
 /* home page */
@@ -59,6 +59,12 @@ body {
 
 .feed-gallery {
     margin-top: 70px;
+}
+
+.uploadPost {
+    background:rgb(226, 201, 230, 0.767);
+    border-radius: 10%;
+    max-width: 100%;
 }
 
 @media (min-width: 400px) and (max-width: 600px){

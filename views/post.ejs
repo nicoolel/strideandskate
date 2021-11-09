@@ -13,8 +13,8 @@
       <% } else if(post.image.includes('image')){ %>
         <img class="img-fluid" src="<%= post.image%>" />
       <% } %>
-      <div class="row justify-content-end">
-        <h3 class="col-3">Likes: <%= post.likes %></h3>
+      <div class="row justify-content-end mt-2">
+        <h3 class="col-4">Likes: <%= post.likes %></h3>
                 <!-- method override makes the form a put - like btn has type submit -->
                 <!-- when we rendered the post, we took the ID into the action  -->
         <form
@@ -42,14 +42,12 @@
         </form>
         <%}%>
       </div>
-    </div>
-    <div class="col-3 mt-5">
       <p>Created by: <%= user.userName %></p>
       <p><%= post.caption %></p>
-    </div>
-    <div class="col-6 mt-5">
-      <a class="btn btn-primary" href="/myPosts">Return to Profile</a>
-      <a class="btn btn-primary" href="/feed">Return to Feed</a>
+      <div class="col-12 align-items-center">
+        <a class="btn btn-primary" href="/myPosts">Return to Profile</a>
+        <a class="btn btn-primary" href="/feed">Return to Feed</a>
+      </div>
     </div>
   </div>
 </div>

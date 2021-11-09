@@ -2,7 +2,7 @@
 <div class="container feed-gallery">
     <div class="row">
         <div class="col-12 mt-2">
-            <p><%= user.userName %>'s Page</p>
+            <p><%= user.userName.toUpperCase() %>'S PAGE</p>
             <a href="/profile">Create a Post</a>
             <ul class="row list-unstyled">
             <% for(var i=0; i<posts.length; i++) {%>
@@ -15,7 +15,6 @@
                 <% } else if(posts[i].image.includes('image')){ %>
                     <img class="img-fluid feed-img" src="<%= posts[i].image%>" />
                 <% } %>
-                <!-- <img class="img-fluid" src="<%= posts[i].image%>"> -->
                 </a>
             </li>
             <% } %>
