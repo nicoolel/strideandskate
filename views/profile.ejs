@@ -1,14 +1,14 @@
 <%- include('partials/loggedInHeader') -%>
 
-    <div class="container profile col-12 col-lg-6 col-sm-8">
+    <div class="container profile col-12 col-sm-8">
       <div class="row mt-5 py-4 justify-content-center uploadPost">
-          <div class="col-12 col-md-8">
+          <div class="col-12 col-md-10 py-4 px-4">
               <div>
-                  <p><strong>Welcome,</strong> <%= user.userName %></p>
+                  <p class="text-center h2"><strong>Hello,</strong> <%= user.userName %></p>
                   <!-- <p><strong>Email</strong>: <%= user.email %></p> -->
               </div>
-              <div class="mt-5">
-                <h2>Add a post</h2>
+              <div class="mt-4">
+                <h2 class="mb-2 h3">Add a post</h2>
                 <form action="/post/createPost" enctype="multipart/form-data" method="POST">
                   <div class="mb-3">
                       <label for="title" class="form-label">Title</label>
