@@ -1,3 +1,12 @@
+html, body, div, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
 body {
     font-family: 'Playfair Display', serif;
     background:rgb(220, 232, 235);
@@ -60,7 +69,7 @@ body {
 }
 
 .feed-btn, .submit-btn, .post-btn {
-    background:rgba(68, 118, 150, 0.479);
+    background:rgba(96, 139, 165, 0.479);
     border: none;
 }
 
@@ -79,17 +88,19 @@ body {
 }
 
 .uploadPost {
-    background:rgba(123, 196, 214, 0.808);
+    background:rgba(132, 194, 239, 0.565);
     border-radius: 10%;
-    max-width: 100%;
+    max-width: 500px;
+    max-height: 600px;
+    margin: 0 auto;
 }
 
-#map {
+/* #map {
   position: absolute; 
   top: 0; 
   bottom: 0; 
   width: 100%; 
-}
+} */
 
 @media (min-width: 400px) and (max-width: 600px){
     .feed-img {
