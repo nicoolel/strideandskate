@@ -77,10 +77,11 @@ body {
     max-width: 60%;
 }
 
-.feed-img {
+.feed-media {
     width: 100%;
     height: 400px;
     object-fit: cover;
+    border-radius: 5px 5px;
 }
 
 .feed-gallery {
@@ -88,13 +89,21 @@ body {
 }
 
 .uploadPost {
-    background:rgba(132, 194, 239, 0.565);
+    background: #98C3C1;
     border-radius: 10%;
     max-width: 500px;
     max-height: 600px;
     margin: 0 auto;
 }
 
+.fa-heart, .fa-heart-broken{
+    background-color: #488286;
+    border: none;
+}
+
+.fa-heart:hover, .fa-heart-broken:hover {
+    background-color: #305252;
+}
 /* #map {
   position: absolute; 
   top: 0; 
