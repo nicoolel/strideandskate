@@ -14,7 +14,7 @@
         <img class="img-fluid" src="<%= post.image%>" />
       <% } %>
       <div class="row justify-content-end mt-2">
-        <h3 class="col-4">Likes: <%= post.likes %></h3>
+        <h3 class="col-3">Likes: <%= post.likes %></h3>
                 <!-- method override makes the form a put - like btn has type submit -->
                 <!-- when we rendered the post, we took the ID into the action  -->
         <form
@@ -42,7 +42,7 @@
         </form>
         <%}%>
       </div>
-      <p>Created by: <%= post.user %></p>
+      <p>Created by: <%= user.userName %></p>
       <p><%= post.caption %></p>
       <div class="col-12 align-items-center">
         <a class="btn btn-primary" href="/myPosts">Return to Profile</a>

@@ -53,8 +53,7 @@ module.exports = {
         cloudinaryId: result.public_id,
         caption: req.body.caption,
         likes: 0,
-        user: req.user.id,
-        userName: req.user.userName
+        user: req.user.id
       });
       console.log("Post has been added!");
       res.redirect("/feed");
