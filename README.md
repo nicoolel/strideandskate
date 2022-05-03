@@ -4,7 +4,7 @@ A roller skating social media app.
 
 I picked up roller skating over the pandemic as a way to get outdoors. I was overwhelemed with information such as which skates to get, what basics to practice first, and what type of skating I wanted to do.
 
-This app serves as a platform to connect with rollerskaters through progress posts. You are able to share your progress and like and comment on the posts of others.
+This app serves as a platform to connect with rollerskaters through progress posts.
 
 I'd like to implement a map feature where rollerskaters can pin their favourite skate spots around the world. Also I'd like to implemement a review feature on roller skates and everything associated with it (wheels, bearings, accessories).
 
